@@ -1,4 +1,4 @@
-// Latihan Segitiga
+// Latihan Segitiga dengan perulangan
 const tinggiSegitiga = 5; 
 
 for (let i = 1; i <= tinggiSegitiga; i++) {
@@ -9,7 +9,7 @@ for (let i = 1; i <= tinggiSegitiga; i++) {
   console.log(bintang);
 }
 
-// Latihan Suwit
+// Latihan Suwit dengan percabangan
 const suitOptions = ["batu", "gunting", "kertas"];
 let playerScore = 0;
 let computerScore = 0;
