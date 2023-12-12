@@ -1,5 +1,4 @@
 // SLICE AND SPLICE
-
 var hari = ["Senin", "Rabu"];
 
 hari.splice(1,0,"Selasa"); // Splice berfungsi untuk menyisipkan ke array
@@ -11,34 +10,40 @@ let slicedArray = originalArray.slice(1, 4); // slice untuk memotong array
 console.log(originalArray.join()); 
 console.log(slicedArray.join());
 
-// FOREACH AND MAP
-const numbers = [1, 2, 3, 4, 5];
+// ForEach & MAP
+var nama = ["Evandri","Davina"];
+var angka = [1,2,3,4,5];
 
-numbers.forEach(function(number) { //ForEach
-  console.log(number);
+angka.forEach(function(e) {  // Pengaplikasian ForEach
+    console.log(e);
 });
 
-const words = ['apple', 'banana', 'cherry'];
-
-const capitalizedWords = words.map(word => word.toUpperCase()); //Map
-
-console.log(capitalizedWords);
-
-console.log(squaredNumbers);
-// SORT
-var angka = [1,3,4,2,7,6,5]; // Sort untung mengurutkan angka
-angka.sort(function(a,b) {
-    return a-b
+nama.forEach(function(e, i) { // ForEach tidak mengembalikan ( return ) Array
+    console.log("Saya orang ke " + (i+1) + " dan nama saya " +e);
 });
-console.log(angka.join());
-// FILTER AND FIND
-const fruits = ['apple', 'banana', 'cherry', 'date'];
-const fruitWithA = fruits.find(fruit => fruit.includes('a')); // Find
 
-console.log(fruitWithA);
+var num = [1,3,4,5,2,7,6]; // Pengaplikasian Map
+var num2 = num.map(function(e) { // Map dapat mengembalikan nilai Array
+    return e * 2
+});
+console.log(num2.join());
 
+// Sort
+var numb = [1,3,5,2,4,10,20,30]; // Sort berfungsi untuk mengurutkan nilai
+numb.sort(function(a,b) {
+    return a-b;
+});
+console.log(numb.join());
 
-const animals = ['cat', 'dog', 'elephant', 'cheetah', 'tiger', 'lion'];
-const animalsWithC = animals.filter(animal => animal.startsWith('c')); // Filter
+// Filter & Find
+var angkas = [1,2,3,4,5,6,7,8,9]; // Filter mengembalikan dalam bentuk array dan bisa lebih dari 1 karna bersifat array
+var angkas2 = angkas.filter(function(x) {
+    return x >= 5;
+});
+console.log(angkas2.join());
 
-console.log(animalsWithC);
+var numbs = [1,2,3,4]; // Find tidak mengembalikan array hanya mengembalikan 1 nilai
+var numbs2 = numbs.find(function(z) {
+    return z == 3;
+});
+console.log(numbs2); // tidak ada method join karna tidak dicetak dalam bentuk array
